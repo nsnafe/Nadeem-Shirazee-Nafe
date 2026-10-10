@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name | AI Automation Developer</title>
+<meta name="description" content="I build AI automations that save businesses hours every week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1F5; --ink:#12203A; --muted:#55627A; --line:#C9D2DE;
+  --trigger:#F2A900; --ai:#3B5BDB; --action:#0F8B6D; --paper:#FFFFFF;
+  --head:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;font-size:17px}
+a{color:var(--ai)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--trigger);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+nav strong{font-family:var(--head);font-size:1.1rem}
+nav a{margin-left:20px;color:var(--ink);text-decoration:none}
+nav a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.lead{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:20px 0 36px}
+
+/* the one memorable element: a workflow strip */
+.flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin:8px 0 12px}
+.node{padding:14px 18px;border-radius:10px;color:#fff;font-weight:500;min-width:150px}
+.node small{display:block;opacity:.85;font-size:.8rem;font-weight:400}
+.node.t{background:var(--trigger);color:#2a1d00}
+.node.a{background:var(--ai)}
+.node.o{background:var(--action)}
+.wire{width:28px;align-self:center;height:3px;background:var(--ink)}
+@media(max-width:620px){.flow{flex-direction:column}.wire{width:3px;height:20px;margin-left:24px}.node{min-width:0}}
+
+section{padding:64px 0 8px}
+h2{font-size:1.9rem;font-weight:800;margin-bottom:24px}
+.project{background:var(--paper);border-left:6px solid var(--ai);padding:24px 26px;margin-bottom:20px;border-radius:0 12px 12px 0}
+.project:nth-of-type(3n+2){border-left-color:var(--action)}
+.project:nth-of-type(3n){border-left-color:var(--trigger)}
+.project h3{font-size:1.35rem;margin-bottom:6px}
+.project p{margin:6px 0}
+.result{font-weight:500}
+.stack{color:var(--muted);font-size:.95rem}
+.links a{margin-right:18px;font-weight:500}
+.skills{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0}
+.skills li{border:2px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:.95rem}
+.about p{max-width:60ch}
+footer{padding:64px 0 48px;color:var(--muted)}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:500}
+.btn:hover{background:var(--ai)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <strong>Your Name</strong>
+  <span><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></span>
+</nav>
+
+<header style="padding-top:48px">
+  <h1>I automate the boring work with AI.</h1>
+  <p class="lead">I build workflows that read, decide and act, so your team spends less time on emails, spreadsheets and copy-paste. <!-- EDIT: one sentence about who you help --></p>
+  <div class="flow" aria-label="Example workflow: new email, AI classifies it, reply drafted and logged">
+    <div class="node t">New email<small>Trigger</small></div><div class="wire"></div>
+    <div class="node a">AI classifies it<small>Decide</small></div><div class="wire"></div>
+    <div class="node o">Reply drafted + logged<small>Act</small></div>
+  </div>
+  <p style="margin-top:28px"><a class="btn" href="#contact">Hire me for a project</a></p>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <!-- COPY THIS BLOCK FOR EACH PROJECT -->
+  <article class="project">
+    <h3>Email triage assistant</h3>
+    <p>Sorts incoming support emails by topic and urgency, drafts a reply, and logs everything to Google Sheets.</p>
+    <p class="result">Result: saves about 5 hours a week. <!-- EDIT: use a real or estimated number --></p>
+    <p class="stack">n8n, Gemini API, Gmail, Google Sheets</p>
+    <p class="links"><a href="https://github.com/your-username/email-triage">Code</a><a href="#">Demo video</a></p>
+  </article>
+
+  <article class="project">
+    <h3>Lead research pipeline</h3>
+    <p>Collects businesses from a public directory, finds their contact details, and scores each lead with AI.</p>
+    <p class="result">Result: 200 qualified leads in 10 minutes instead of a full day.</p>
+    <p class="stack">Python, BeautifulSoup, Groq API, Google Sheets</p>
+    <p class="links"><a href="https://github.com/your-username/lead-pipeline">Code</a><a href="#">Demo video</a></p>
+  </article>
+
+  <article class="project">
+    <h3>FAQ chatbot for a small shop</h3>
+    <p>Answers customer questions from the shop's own documents and says so when it does not know.</p>
+    <p class="result">Result: answers common questions instantly, any time of day.</p>
+    <p class="stack">RAG, Hugging Face Spaces, Gradio</p>
+    <p class="links"><a href="https://github.com/your-username/faq-bot">Code</a><a href="#">Live demo</a></p>
+  </article>
+</section>
+
+<section id="about" class="about">
+  <h2>About</h2>
+  <p>Hi, I'm Your Name. I'm based in Dhaka and I build automations for small businesses and startups. <!-- EDIT: your story in 2 or 3 sentences --></p>
+  <h3 style="margin:28px 0 14px;font-size:1.1rem">Tools I use</h3>
+  <ul class="skills">
+    <li>n8n</li><li>Make</li><li>Python</li><li>Google Apps Script</li><li>OpenAI / Gemini APIs</li><li>RAG</li><li>Webhooks and APIs</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Tell me what slows your team down and I'll tell you if it can be automated.</p>
+  <p><a class="btn" href="mailto:you@example.com">you@example.com</a></p>
+  <p class="links"><a href="https://github.com/your-username">GitHub</a><a href="https://linkedin.com/in/your-profile">LinkedIn</a></p>
+</section>
+
+<footer>&copy; 2026 Your Name</footer>
+</div>
+</body>
+</html>
